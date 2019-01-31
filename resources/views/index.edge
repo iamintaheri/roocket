@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+   <head>
+      <meta name="apple-mobile-web-app-capable" content="yes">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+      <link rel="shortcut icon" href="/public/img/roocket.ico">
+      <meta name="csrf-token" content="PkCQMNt2l63r14dIb7fX8cObHivHDgqiwCahAZJY">
+      <link rel="alternate" type="application/rss+xml" title="فید خوان مقالات - راکت" href="/feed/articles" />
+      <link rel="alternate" type="application/rss+xml" title="فید خوان ویدیوها - راکت" href="/feed/episodes" />
+      <title>راکت آموزش برنامه نویسی</title>
+      <meta name="description" content="راکت وبسایت آموزش برنامه نویسی وب و موبایل ، جاوااسکریپت ، لاراول ، آموزش پیشرفته react native و reactjs ، آموزش node js ، آموزش پیشرفته node و انواع زبان های دیگر که همواره سعی کرده است بروزترین باشد">
+      <meta name="keywords" content="آموزش طراحی سایت,آموزش برنامه نویسی,طراحی وب,ساخت وب سایت,آموزش git,آموزش لاراول,آموزش php,آموزش react,آموزش پی اچ پی,آموزش laravel,آموزش جاوا اسکریپت,آموزش ساخت وب سایت,آموزش بوت استرپ,آموزش mvc,آموزش React Native,راکت">
+      <meta property="og:title" content="راکت آموزش برنامه نویسی" />
+      <meta property="og:description" content="راکت وبسایت آموزش برنامه نویسی وب و موبایل ، جاوااسکریپت ، لاراول ، آموزش پیشرفته react native و reactjs ، آموزش node js ، آموزش پیشرفته node و انواع زبان های دیگر که همواره سعی کرده است بروزترین باشد" />
+      <meta property="og:url" content="https://roocket.ir" />
+      <meta property="og:site_name" content="مجله آموزشی راکت" />
+      <meta property="og:brand" content="راکت" />
+      <meta property="og:locale" content="fa" />
+      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:site" content="@roocketir" />
+      <meta name="twitter:title" content="راکت آموزش برنامه نویسی" />
+      <meta name="twitter:description" content="راکت وبسایت آموزش برنامه نویسی وب و موبایل ، جاوااسکریپت ، لاراول ، آموزش پیشرفته react native و reactjs ، آموزش node js ، آموزش پیشرفته node و انواع زبان های دیگر که همواره سعی کرده است بروزترین باشد" />
+      <link rel="stylesheet" href="/Css/index.css">
+      <link rel="stylesheet" href="/Css/font-awesome.min.css">
+      <script type="application/ld+json">{"@context": "http://schema.org","@type": "WebSite","url": "https://roocket.ir/","name":"راکت مجله آموزش طراحی و برنامه نویسی","potentialAction": {"@type": "SearchAction","target": "http://roocket.ir/search?search={search_term_string}","query-input": "required name=search_term_string"}}</script>
+      <script type="application/ld+json">{"@context": "http://schema.org","@type": "Organization","email": "info[at]roocket.ir","name": "roocket.ir","telephone": "09381329963","sameAs" : ["https://www.instagram.com/roocketir/"]}</script>
+   </head>
+   <body>
+      <div class="wrapper" id="app">
+         <login :showmodal="showModalLogin" @close-modal="showModalLogin = false"></login>
+         <header class="header_section">
+            <div class="nav">
+               <div class="header_top_menu">
+                  <div class="container">
+                     <ul>
+                        <li><a href="/skills-chart">چارت مهارت</a></li>
+                        <li><a href="https://t.me/roocket_ir" rel="nofollow">کانال تلگرام</a></li>
+                     </ul>
+                     <ul>
+                        <li><a href="/about-us">درباره راکت</a></li>
+                        <li><a href="/contact-us">ارتباط با ما</a></li>
+                     </ul>
+                  </div>
+               </div>
+               <nav class="nav_section container">
+                  <h1 class="title"><a href="/">مجله آموزشی <span>راکت</span></a></h1>
+                  <search></search>
+                  <div class="header_action">
+                     <a class="register" href="/register/plan">عضویت</a>
+                     <a class="login" href="/login" >ورود</a>
+                  </div>
+                  <div class="hamburger_menu">
+                     <i class="fa fa-bars" id="hamburger_menu" ref="hamburgerMenu" @click="hamburgerMenu($event)" aria-hidden="true"></i>
+                  </div>
+               </nav>
+            </div>
+            <div class="header_menu_toggle container" id="header_menu_toggle" ref="header_menu_toggle">
+               <ul>
+                  <li class="no-action">
+                     <form class="search_box" action="/search">
+                        <input type="text" name="search" placeholder="دنبال چی میگردی ؟">
+                     </form>
+                  </li>
+                  <li><a href="/">صفحه اصلی</a></li>
+                  <li><a href="/login">ورود</a></li>
+                  <li><a href="/register/plan">عضویت</a></li>
+                  <li><a href="/discuss">بحث و گفتگو ها</a></li>
+                  <li><a href="/series">دوره های آموزشی</a></li>
+                  <li><a href="/lessons">آخرین ویدیوها</a></li>
+                  <li><a href="/articles">مقالات</a></li>
+                  <li><a href="/podcast">راکت‌کست</a></li>
+                  <li><a href="https://t.me/roocket_ir" rel="nofollow">کانال تلگرام</a></li>
+                  <li><a href="/contact-us">ارتباط با ما</a></li>
+               </ul>
+            </div>
+            <div class="header_menu">
+               <ul class="container">
+                  <li><a href="/">صفحه اصلی</a></li>
+                  <li><a href="/discuss">بحث و گفتگو ها</a></li>
+                  <li class="has-submenu">
+                     <a href="#">دوره های آموزشی</a>
+                     <ul class="submenu">
+                        <li class="submenu-item">
+                           <span class="icon"></span>
+                           <a href="/series">همه دوره‌ها</a>
+                        </li>
+                        <li class="submenu-item">
+                           <span class="icon"></span>
+                           <a href="/lessons">آخرین ویدیوها</a>
+                        </li>
+                     </ul>
+                  </li>
+                  <li><a href="/articles">مقالات</a></li>
+                  <li><a href="/podcast">راکت‌کست</a></li>
+               </ul>
+            </div>
+            <div class="header_main-bg">
+               <div class="header_main container">
+                  <h2 class="header_main--title">به دنیای برنامه نویسی پرتاب شو</h2>
+                  <p class="header_main--description">باور ما اینست که کاربران ایرانی لایق بهترین ها هستند و باید بهترین و بروزترین فیلم های آموزشی و مقالات در اختیار آنها قرار بگیرد تا بتوانند به سرعت پیشرفت کنند و جزء بهترین ها در صنعت طراحی و برنامه نویسی وب شوند . با ما همراه باشید تا بهترین ها رو لایق بهترین کاربران کنیم</p>
+                  <div class="group">
+                     <a href="/series" class="course_btn">
+                     دوره های آموزشی
+                     </a>
+                     <a href="/articles" class="article_btn">
+                     مقالات آموزشی
+                     </a>
+                     <a href="/discuss" class="course_btn discuss_btn" >بحث و گفتگو</a>
+                     <!-- <button type="button" name="button" class="work_btn">
+                        <a href="#">کاریابی</a>
+                        </button> -->
+                  </div>
+               </div>
+            </div>
+         </header>
+         <div class="co-padding">
+            <div class="box container">
+               <div class="box_head">
+                  <h4 class="title">دوره‌های پیشنهادی</h4>
+                  <a href="/series" class="btn_more">
+                  مشاهده همه دوره ها
+                  </a>
+               </div>
+               <div class="box_section">
+                     @each(video in videos)
+                  <div class="box_section-item" itemscope itemtype="http://schema.org/Product" data-course-id="46" id="course_46">
+                     <div class="item_img">
+                        <a href="/series/build-an-educational-website-and-shop-with-laravel">
+                        <img itemprop="image" src="https://roocket.ir/public/image/2017/6/13/cms-laravel-cover-1.jpg" alt="ساخت یک وبسایت آموزشی (فروشگاهی) با لاراول">
+                        </a>
+                        <span class="box-status">کامل شده</span>
+                     </div>
+                     <div class="item_content">
+                     <h2 class="title"><a itemprop="url" href="/video/{{video.id}}/{{video.title}}"><span itemprop="name">{{video.title}} </span></a></h2>
+                        <p class="description" itemprop="description">
+                                {{video.description}}
+                        </p>
+                     </div>
+                     <div class="item_footer">
+                        <span class="course_time">30:19:42 <i class="fa fa-clock-o" aria-hidden="true"></i></span>
+                        <span class="course_price">{{video.price}} تومان</span>
+                     </div>
+                  </div>
+                     @endeach
+                  </div>
+                 
+                 
+                 
+               </div>
+               <div class="box_footer">
+                  <a href="/lessons" class="more last-episode">
+                  مشاهده آخرین ویدیوهای آپلود شده
+                  </a>
+                  <span class="note">در این بخش آخرین قسمت های قرار گرفته در دوره های آموزشی قابل مشاهده خواهد بود</span>
+               </div>
+            </div>
+         </div>
+         <div class="offer-course" id="offer-course-index">
+            <div class="container">
+               <div class="right">
+                  <div class="last-discuss">
+                     <div class="last-discuss--head">
+                        <div class="right">
+                           <h3 class="title">آخرین گفتگوهای ارسال شده</h3>
+                        </div>
+                     </div>
+                     <div class="discuss-list">
+                        <section class="discuss-box ">
+                           <div class="avatar">
+                              <div class="image">
+                                 <img src="https://www.gravatar.com/avatar/ba816c603186ccdba48c9a85f4898a5f?s=200&amp;d=mm&amp;r=g" alt="Ali Hoosaini">
+                              </div>
+                           </div>
+                           <div class="details">
+                              <div class="title">
+                                 <a href="/discuss/ارسال-عکس">ارسال عکس</a>
+                              </div>
+                              <div class="discuss-box--details">
+                                 <div class="subject-discuss">ویو جی اس</div>
+                                 <div class="time-ago"> - 3 ساعت پیش</div>
+                              </div>
+                           </div>
+                           <div class="answer">0 پاسخ</div>
+                        </section>
+                        <section class="discuss-box ">
+                           <div class="avatar">
+                              <div class="image">
+                                 <img src="https://www.gravatar.com/avatar/3b76d0f6ea56b16e00cb20bdabf1b9d0?s=200&amp;d=mm&amp;r=g" alt="mahdi mehrabi">
+                              </div>
+                           </div>
+                           <div class="details">
+                              <div class="title">
+                                 <a href="/discuss/انیمشن-در-پس-زمینه-div">انیمشن در پس زمینه div</a>
+                              </div>
+                              <div class="discuss-box--details">
+                                 <div class="subject-discuss">طراحی وب</div>
+                                 <div class="time-ago"> - 3 ساعت پیش</div>
+                              </div>
+                           </div>
+                           <div class="answer">1 پاسخ</div>
+                        </section>
+                        <section class="discuss-box ">
+                           <div class="avatar">
+                              <div class="image">
+                                 <img src="https://www.gravatar.com/avatar/db1d2ae204833d56d50318e108b25ac1?s=200&amp;d=mm&amp;r=g" alt="Ali Ghaleyan">
+                              </div>
+                           </div>
+                           <div class="details">
+                              <div class="title">
+                                 <a href="/discuss/تبدیل-تاریخ-در-قالب-Carbon-در-لاراول">تبدیل تاریخ در قالب Carbon در لاراول</a>
+                              </div>
+                              <div class="discuss-box--details">
+                                 <div class="subject-discuss">لاراول</div>
+                                 <div class="time-ago"> - 5 ساعت پیش</div>
+                              </div>
+                           </div>
+                           <div class="answer">1 پاسخ</div>
+                        </section>
+                        <section class="discuss-box ">
+                           <div class="avatar">
+                              <div class="image">
+                                 <img src="https://www.gravatar.com/avatar/694d21116e51a380aa06b0be3498c681?s=200&amp;d=mm&amp;r=g" alt="mjsolgi">
+                              </div>
+                           </div>
+                           <div class="details">
+                              <div class="title">
+                                 <a href="/discuss/مشکل-در-relese-گرفتن-از-پروژه-react-native">مشکل در relese گرفتن از پروژه react native</a>
+                              </div>
+                              <div class="discuss-box--details">
+                                 <div class="subject-discuss">ری اکت جی اس</div>
+                                 <div class="time-ago"> - 7 ساعت پیش</div>
+                              </div>
+                           </div>
+                           <div class="answer">1 پاسخ</div>
+                        </section>
+                        <section class="discuss-box ">
+                           <div class="avatar">
+                              <div class="image">
+                                 <img src="https://www.gravatar.com/avatar/cc24bb0963f9bf768bd69356d2859aad?s=200&amp;d=mm&amp;r=g" alt="Alireza Khavari">
+                              </div>
+                           </div>
+                           <div class="details">
+                              <div class="title">
+                                 <a href="/discuss/مشورت-درباره-انتخاب-پروژه-دانشجویی">مشورت درباره انتخاب پروژه دانشجویی</a>
+                              </div>
+                              <div class="discuss-box--details">
+                                 <div class="subject-discuss">ری اکت جی اس</div>
+                                 <div class="time-ago"> - 21 ساعت پیش</div>
+                              </div>
+                           </div>
+                           <div class="answer">1 پاسخ</div>
+                        </section>
+                        <section class="discuss-box">
+                           <div class="avatar">
+                              <div class="image">
+                                 <span>...</span>
+                              </div>
+                           </div>
+                           <div class="details">
+                              <div class="title">
+                                 <a href="/discuss">مشاهده همه گفتگوها</a>
+                              </div>
+                           </div>
+                        </section>
+                     </div>
+                  </div>
+               </div>
+               <div class="left">
+                  <div class="roocket-cast last-discuss">
+                     <div class="last-discuss--head">
+                        <div class="right">
+                           <i class="fa fa-microphone"></i>
+                           <h3 class="title">آخرین راکت‌کست ها</h3>
+                        </div>
+                        <a href="/podcast" class="btn_more">مشاهده همه</a>
+                     </div>
+                     <div class="discuss-list">
+                        <section class="discuss-box">
+                           <div class="details">
+                              <h2 class="title">
+                                 <a href="/podcast/1008">حقوق برنامه نویسان و درآمد ارزی</a>
+                              </h2>
+                              <div class="discuss-box--details">
+                                 <div class="subject-discuss">راکت‌کست شماره 8</div>
+                                 <div class="time-ago"> - 24:37 دقیقه</div>
+                              </div>
+                           </div>
+                        </section>
+                        <section class="discuss-box">
+                           <div class="details">
+                              <h2 class="title">
+                                 <a href="/podcast/1007">کدام زبان برنامه نویسی و چرا ؟</a>
+                              </h2>
+                              <div class="discuss-box--details">
+                                 <div class="subject-discuss">راکت‌کست شماره 7</div>
+                                 <div class="time-ago"> - 22:42 دقیقه</div>
+                              </div>
+                           </div>
+                        </section>
+                        <section class="discuss-box">
+                           <div class="details">
+                              <h2 class="title">
+                                 <a href="/podcast/1006">تست نویسی اصلا به چه دردمون میخوره ؟</a>
+                              </h2>
+                              <div class="discuss-box--details">
+                                 <div class="subject-discuss">راکت‌کست شماره 6</div>
+                                 <div class="time-ago"> - 16:01 دقیقه</div>
+                              </div>
+                           </div>
+                        </section>
+                        <section class="discuss-box">
+                           <div class="details">
+                              <h2 class="title">
+                                 <a href="/podcast/1005">برنامه نویس بودن یا شدن در وضعیت فعلی اقتصادی کشور</a>
+                              </h2>
+                              <div class="discuss-box--details">
+                                 <div class="subject-discuss">راکت‌کست شماره 5</div>
+                                 <div class="time-ago"> - 18:00 دقیقه</div>
+                              </div>
+                           </div>
+                        </section>
+                     </div>
+                  </div>
+                  <div class="boxs">
+                     <a href="/skills/laravel" class="box laravel">
+                        <div class="content">
+                           <h2 class="title">آموزش لاراول</h2>
+                           <p class="description">در راکت شما میتوانید دوره های زیادی از لاراول را مشاهده کنید و در نهایت به سادگی به یک متخصص لاراول تبدیل شوید</p>
+                        </div>
+                     </a>
+                     <a href="/skills/javascript" class="box javascript">
+                        <div class="content">
+                           <h2 class="title">آموزش جاوا اسکریپت</h2>
+                           <p class="description">در این بخش یک مسیر برای یادگیری Javascript در Backend را مشاهده میکنید</p>
+                        </div>
+                     </a>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="co-padding gray_bg gray_bg_icon">
+            <div class="box container">
+               <div class="box_head">
+                  <h4 class="title">آخرین مقالات</h4>
+                  <a href="/articles" class="btn_more">
+                  مشاهده همه مقالات
+                  </a>
+               </div>
+               <div class="box_section">
+                  <div class="box_section-item">
+                     <div class="item_img">
+                        <div class="bookmark" >
+                           <span><i @click="bookmarkArticle($event,3708 , 0)" class="fa fa-bookmark-o"></i></span>
+                        </div>
+                        <a href="/articles/why-most-people-will-never-be-successful">
+                        <img src="https://roocket.ir/public/images/2019/1/29/success.png" alt="علت این که اکثر مردم هیچ وقت موفق نخواهند شد">
+                        </a>
+                     </div>
+                     <div class="item_content">
+                        <h2 class="title"><a href="/articles/why-most-people-will-never-be-successful">علت این که اکثر مردم هیچ وقت موفق نخواهند شد</a></h2>
+                        <p class="description">
+                           «موفقیت» فقط داشتن پول زیاد نیست. بسیاری از افرادی که پول زیادی دارند، زندگی‌های به شدت ناراحت کننده و نامتوازن دارند. موفقیت به طور مداوم کسی که هستی...
+                        </p>
+                     </div>
+                     <div class="item_footer">
+                        <div class="item_footer-info">
+                           <div class="view">
+                              124 <i class="fa fa-eye" aria-hidden="true"></i>
+                           </div>
+                           <div class="likes" >
+                              <span ref="likecount">4</span>
+                              <i @click="likeArticle($event,3708 , 0)" class="fa fa-heart-o"></i>
+                           </div>
+                        </div>
+                        <div class="author">عرفان کاکایی</div>
+                     </div>
+                  </div>
+                  <div class="box_section-item">
+                     <div class="item_img">
+                        <div class="bookmark" >
+                           <span><i @click="bookmarkArticle($event,3707 , 0)" class="fa fa-bookmark-o"></i></span>
+                        </div>
+                        <a href="/articles/building-a-recipe-app-using-prisma-and-react">
+                        <img src="https://roocket.ir/public/images/2019/1/29/react.png" alt="ساخت یک برنامه مربوط به دستور پخت غذا با استفاده از Prisma و React">
+                        </a>
+                     </div>
+                     <div class="item_content">
+                        <h2 class="title"><a href="/articles/building-a-recipe-app-using-prisma-and-react">ساخت یک برنامه مربوط به دستور پخت غذا با استفاده از Prisma و React</a></h2>
+                        <p class="description">
+                           در یکی دو سال اخیر، GraphQL با توجه به برتری‌های متنوعی که در زمینه REST دارد، توانسته در صحنه توسعه‌دهی frontend بسیار پیش برود.گرچه، راه‌اندازی یک س...
+                        </p>
+                     </div>
+                     <div class="item_footer">
+                        <div class="item_footer-info">
+                           <div class="view">
+                              91 <i class="fa fa-eye" aria-hidden="true"></i>
+                           </div>
+                           <div class="likes" >
+                              <span ref="likecount">0</span>
+                              <i @click="likeArticle($event,3707 , 0)" class="fa fa-heart-o"></i>
+                           </div>
+                        </div>
+                        <div class="author">عرفان کاکایی</div>
+                     </div>
+                  </div>
+                  <div class="box_section-item">
+                     <div class="item_img">
+                        <div class="bookmark" >
+                           <span><i @click="bookmarkArticle($event,3706 , 0)" class="fa fa-bookmark-o"></i></span>
+                        </div>
+                        <a href="/articles/few-simple-rules-for-good-coding-my-15-years-experience">
+                        <img src="https://roocket.ir/public/images/2019/1/29/code.png" alt="۱۳ قاعده ساده برای کدنویسی بهتر">
+                        </a>
+                     </div>
+                     <div class="item_content">
+                        <h2 class="title"><a href="/articles/few-simple-rules-for-good-coding-my-15-years-experience">۱۳ قاعده ساده برای کدنویسی بهتر</a></h2>
+                        <p class="description">
+                           من بیشتر از ۱۵ سال است که مشغول برنامه‌نویسی هستم. در این مدت با زبان‌ها، فریمورک‌ها، پارادایم‌ها و... مختلفی کار کرده‌ام. اما امروز در این مطلب قصد د...
+                        </p>
+                     </div>
+                     <div class="item_footer">
+                        <div class="item_footer-info">
+                           <div class="view">
+                              166 <i class="fa fa-eye" aria-hidden="true"></i>
+                           </div>
+                           <div class="likes" >
+                              <span ref="likecount">1</span>
+                              <i @click="likeArticle($event,3706 , 0)" class="fa fa-heart-o"></i>
+                           </div>
+                        </div>
+                        <div class="author">ارسطو عباسی</div>
+                     </div>
+                  </div>
+                  <div class="box_section-item">
+                     <div class="item_img">
+                        <div class="bookmark" >
+                           <span><i @click="bookmarkArticle($event,3705 , 0)" class="fa fa-bookmark-o"></i></span>
+                        </div>
+                        <a href="/articles/5-reasons-why-we-switched-from-python-to-go">
+                        <img src="https://roocket.ir/public/images/2019/1/28/go.png" alt="5 دلیل برای مهاجرت از پایتون به گو">
+                        </a>
+                     </div>
+                     <div class="item_content">
+                        <h2 class="title"><a href="/articles/5-reasons-why-we-switched-from-python-to-go">5 دلیل برای مهاجرت از پایتون به گو</a></h2>
+                        <p class="description">
+                           این مطلب توسط توسعه‌دهندگان وبسایت TreeScale نوشته شده و تقریبا یادداشتی شخصی در ارتباط با آن است که چرا از زبان برنامه‌نویسی پایتون برای توسعه وبسایت...
+                        </p>
+                     </div>
+                     <div class="item_footer">
+                        <div class="item_footer-info">
+                           <div class="view">
+                              427 <i class="fa fa-eye" aria-hidden="true"></i>
+                           </div>
+                           <div class="likes" >
+                              <span ref="likecount">8</span>
+                              <i @click="likeArticle($event,3705 , 0)" class="fa fa-heart-o"></i>
+                           </div>
+                        </div>
+                        <div class="author">ارسطو عباسی</div>
+                     </div>
+                  </div>
+                  <div class="box_section-item">
+                     <div class="item_img">
+                        <div class="bookmark" >
+                           <span><i @click="bookmarkArticle($event,3704 , 0)" class="fa fa-bookmark-o"></i></span>
+                        </div>
+                        <a href="/articles/how-to-change-your-life-in-30-days">
+                        <img src="https://roocket.ir/public/images/2019/1/28/30days.png" alt="چگونه در عرض ۳۰ روز زندگی خود را تغییر دهیم؟">
+                        </a>
+                     </div>
+                     <div class="item_content">
+                        <h2 class="title"><a href="/articles/how-to-change-your-life-in-30-days">چگونه در عرض ۳۰ روز زندگی خود را تغییر دهیم؟</a></h2>
+                        <p class="description">
+                           خود بیداری: یعنی به عنوان یک انسان، خود را نیز به همان صورت که دیگران را ارزیابی کرده و قضاوت می‌کنیم، ارزیابی کرده و قضاوت کنیم؛ یعنی بر پایه رفتارها...
+                        </p>
+                     </div>
+                     <div class="item_footer">
+                        <div class="item_footer-info">
+                           <div class="view">
+                              241 <i class="fa fa-eye" aria-hidden="true"></i>
+                           </div>
+                           <div class="likes" >
+                              <span ref="likecount">5</span>
+                              <i @click="likeArticle($event,3704 , 0)" class="fa fa-heart-o"></i>
+                           </div>
+                        </div>
+                        <div class="author">عرفان کاکایی</div>
+                     </div>
+                  </div>
+                  <div class="box_section-item">
+                     <div class="item_img">
+                        <div class="bookmark" >
+                           <span><i @click="bookmarkArticle($event,3703 , 0)" class="fa fa-bookmark-o"></i></span>
+                        </div>
+                        <a href="/articles/focus-and-deep-work-your-secret-weapons-to-becoming-a-10x-developer">
+                        <img src="https://roocket.ir/public/images/2019/1/28/developer.png" alt="تمرکز و کار عمیق - سلاح‌های مخفی شما برای تبدیل شدن به یک توسعه دهنده با باروری ۱۰ برابر">
+                        </a>
+                     </div>
+                     <div class="item_content">
+                        <h2 class="title"><a href="/articles/focus-and-deep-work-your-secret-weapons-to-becoming-a-10x-developer">تمرکز و کار عمیق - سلاح‌های مخفی شما برای تبدیل شدن به یک توسعه دهنده با باروری ۱۰ برابر</a></h2>
+                        <p class="description">
+                           مهم نیست که بر روی یک موضوع جانبی کار می‌کنید، یا این که یک توسعه دهنده تازه‌کار هستید که منتظر جلب توجه و ترفیع است. مهم نیست که شما یک توسعه ارشد هس...
+                        </p>
+                     </div>
+                     <div class="item_footer">
+                        <div class="item_footer-info">
+                           <div class="view">
+                              189 <i class="fa fa-eye" aria-hidden="true"></i>
+                           </div>
+                           <div class="likes" >
+                              <span ref="likecount">4</span>
+                              <i @click="likeArticle($event,3703 , 0)" class="fa fa-heart-o"></i>
+                           </div>
+                        </div>
+                        <div class="author">عرفان کاکایی</div>
+                     </div>
+                  </div>
+                  <div class="box_section-item">
+                     <div class="item_img">
+                        <div class="bookmark" >
+                           <span><i @click="bookmarkArticle($event,3702 , 0)" class="fa fa-bookmark-o"></i></span>
+                        </div>
+                        <a href="/articles/understanding-document-object-model">
+                        <img src="https://roocket.ir/public/images/2019/1/27/dom.png" alt="درک DOM به همراه جزئیات">
+                        </a>
+                     </div>
+                     <div class="item_content">
+                        <h2 class="title"><a href="/articles/understanding-document-object-model">درک DOM به همراه جزئیات</a></h2>
+                        <p class="description">
+                           همه ما درباره DOM یا Document Object Model (طرح آبجکت سند) شنیده‌ایم، که هر از گاهی به آن اشاره می‌شود و به JavaScript مربوط است. DOM در توسعه‌دهی وب...
+                        </p>
+                     </div>
+                     <div class="item_footer">
+                        <div class="item_footer-info">
+                           <div class="view">
+                              216 <i class="fa fa-eye" aria-hidden="true"></i>
+                           </div>
+                           <div class="likes" >
+                              <span ref="likecount">0</span>
+                              <i @click="likeArticle($event,3702 , 0)" class="fa fa-heart-o"></i>
+                           </div>
+                        </div>
+                        <div class="author">عرفان کاکایی</div>
+                     </div>
+                  </div>
+                  <div class="box_section-item">
+                     <div class="item_img">
+                        <div class="bookmark" >
+                           <span><i @click="bookmarkArticle($event,3701 , 0)" class="fa fa-bookmark-o"></i></span>
+                        </div>
+                        <a href="/articles/open-source-community-give-back">
+                        <img src="https://roocket.ir/public/images/2019/1/27/open-source.png" alt="۱۰ راه برای شرکت در جامعه متن باز">
+                        </a>
+                     </div>
+                     <div class="item_content">
+                        <h2 class="title"><a href="/articles/open-source-community-give-back">۱۰ راه برای شرکت در جامعه متن باز</a></h2>
+                        <p class="description">
+                           نرم‌افزارهای متن باز به تسریع توسعه‌دهی فناوری اطلاعات کمک کرده،‌ و باعث ایجاد موقعیت‌هایی شده‌اند که تا به حال دیده نشده‌اند. فقط به استارت‌آپ‌ها و ک...
+                        </p>
+                     </div>
+                     <div class="item_footer">
+                        <div class="item_footer-info">
+                           <div class="view">
+                              157 <i class="fa fa-eye" aria-hidden="true"></i>
+                           </div>
+                           <div class="likes" >
+                              <span ref="likecount">1</span>
+                              <i @click="likeArticle($event,3701 , 0)" class="fa fa-heart-o"></i>
+                           </div>
+                        </div>
+                        <div class="author">عرفان کاکایی</div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="register_panel">
+            <div class="container">
+               <div class="register_panel--head">
+                  <h4 class="title">پنل های کاربری راکت</h4>
+                  <p class="description">در عرض چند ثانیه در راکت عضو شوید تا بتوانید از امکانات سایت بصورت کامل استفاده کنید . همه این امکانات در کنار هم قرار گرفته اند تا به شما کمک کنند به ساده ترین روش , جدیدترین و کاربردی ترین زبان ها و فریمورک های روز جهان رو یاد بگیرید</p>
+               </div>
+               <div class="register_panel--section">
+                  <div class="register_panel--section_item">
+                     <span class="register_panel-type">رایگان</span>
+                     <div class="register_panel-price">
+                        <div class="price">
+                           <div class="current">۰</div>
+                        </div>
+                        <span>هزارتومان</span>
+                     </div>
+                     <p class="register_panel-description">
+                        با این پنل میتوانید در سایت همکاری داشته باشید و از دوره ها و مقالات سایت خیلی سریع اطلاع پیدا کنید
+                     </p>
+                     <a href="/register?plan=0" class="register_panel-btn">
+                     عضویت
+                     </a>
+                  </div>
+                  <div class="register_panel--section_item">
+                     <span class="register_panel-type">ماهانه</span>
+                     <div class="register_panel-price">
+                        <div class="price">
+                           <div class="current">49</div>
+                        </div>
+                        <span>هزارتومان</span>
+                     </div>
+                     <p class="register_panel-description">
+                        با خریداری این پنل شما میتوانید به ویدیوهای ویژه سایت به مدت یک ماه بطور کامل دسترسی داشته باشید.
+                     </p>
+                     <a href="/register?plan=1" class="register_panel-btn">
+                     عضویت
+                     </a>
+                  </div>
+                  <div class="register_panel--section_item">
+                     <span class="register_panel-type">3 ماهه</span>
+                     <div class="register_panel-price">
+                        <div class="price">
+                           <div class="prev">147</div>
+                           <div class="current">79</div>
+                        </div>
+                        <span>هزارتومان</span>
+                     </div>
+                     <p class="register_panel-description">
+                        با خریداری این پنل شما میتوانید به ویدیوهای ویژه سایت به مدت چهار ماه بطور کامل دسترسی داشته باشید.
+                     </p>
+                     <a href="/register?plan=3" class="register_panel-btn">
+                     عضویت
+                     </a>
+                     <p class="register_panel-note">
+                        20٪ تخفیف برای خرید <br>
+                        دوره های نقدی
+                     </p>
+                  </div>
+                  <div class="register_panel--section_item">
+                     <span class="register_panel-type">یکساله</span>
+                     <div class="register_panel-price">
+                        <div class="price">
+                           <div class="prev">588</div>
+                           <div class="current">239</div>
+                        </div>
+                        <span>هزارتومان</span>
+                     </div>
+                     <p class="register_panel-description">
+                        با خریداری این پنل شما میتوانید به ویدیوهای ویژه سایت به مدت یکسال بطور کامل دسترسی داشته باشید.
+                     </p>
+                     <a href="/register?plan=12" class="register_panel-btn">
+                     عضویت
+                     </a>
+                     <p class="register_panel-note">
+                        40٪ تخفیف برای خرید <br>
+                        دوره های نقدی
+                     </p>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <notifications  classes="notification-style" position="bottom right" group="notify" />
+      </div>
+      <footer class="footer">
+         <div class="container">
+            <div class="footer-top">
+               <div class="about_us">
+                  <h4 class="title">درباره راکت</h4>
+                  <p class="body">راکت یکی از پرتلاش‌ترین و بروزترین وبسایت های آموزشی در سطح ایران است که همیشه تلاش کرده تا بتواند جدیدترین و بروزترین مقالات و دوره‌های آموزشی را در اختیار علاقه‌مندان ایرانی قرار دهد. تبدیل کردن برنامه نویسان ایرانی به بهترین برنامه نویسان جهان هدف ماست </p>
+               </div>
+               <div class="roocket_section">
+                  <h4 class="title">بخش های سایت</h4>
+                  <ul class="body">
+                     <li><a href="/series">دوره‌های آموزشی</a></li>
+                     <li><a href="/lessons">آخرین ویدیو‌ها</a></li>
+                     <li><a href="/discuss">بحث و گفتگو</a></li>
+                     <li><a href="/contact-us">ارتباط با ما</a></li>
+                  </ul>
+               </div>
+               <div class="contact_us">
+                  <h4 class="title">ارتباط با ما</h4>
+                  <div class="group">
+                     <div class="body">
+                        <p class="description">شما میتوانید با استفاده از یکی از راه‌های زیر با ما ارتباط برقرار کنید</p>
+                        <ul>
+                           <li><i class="fa fa-telegram"></i>شماره تلگرام :‌ 09119198904</li>
+                        </ul>
+                     </div>
+                     <p class="allow">
+                        <img id = 'jxlzjxlzjxlzjxlznbqejxlz' style = 'cursor:pointer' onclick = 'window.open("https://logo.samandehi.ir/Verify.aspx?id=111121&p=rfthrfthrfthrfthuiwkrfth", "Popup","toolbar=no, scrollbars=no, location=no, statusbar=no, menubar=no, resizable=0, width=450, height=630, top=30")' alt = 'logo-samandehi' src = 'https://roocket.ir/img/samandehi.png' />
+                     </p>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="footer-bottom">
+            <div class="container">
+               <div class="copy_right">
+                  کليه حقوق محصولات و محتوای اين سایت متعلق به راکت می باشد و هر گونه کپی برداری از محتوا و محصولات سایت غیر مجاز و بدون رضایت ماست
+               </div>
+               <div class="social_link">
+                  <a href="https://www.facebook.com/roocketi" rel="me"><i class="fa fa-facebook-square"></i></a>
+                  <a href="#" rel="me"><i class="fa fa-google"></i></a>
+                  <a href="https://www.instagram.com/roocketir/" rel="me"><i class="fa fa-instagram"></i></a>
+                  <a href="https://roocket.ir/feed/articles" rel="me"><i class="fa fa-rss-square"></i></a>
+                  <a href="https://twitter.com/roocketir" rel="me"><i class="fa fa-twitter-square"></i></a>
+                  <a href="https://t.me/roocket_ir" rel="me"><i class="fa fa-telegram"></i></a>
+               </div>
+            </div>
+         </div>
+      </footer>
+      <!-- Scripts -->
+      <script type="text/javascript" src="/js/app.js?id=a61ad58b9d3fadcffc73"></script>
+   </body>
+</html>

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="shortcut icon" href="/public/img/roocket.ico">
+    <meta name="csrf-token" content="HHDFkBB0jQSdyKxukcKfbqWAhviYqSeHZ0mT7yYG">
+    <link rel="alternate" type="application/rss+xml" title="فید خوان مقالات - راکت" href="/feed/articles" />
+    <link rel="alternate" type="application/rss+xml" title="فید خوان ویدیوها - راکت" href="/feed/episodes" />
+    <title>عضویت در راکت</title>
+<link rel="canonical" href="https://roocket.ir/register?plan=0"/>
+<meta property="og:title" content="عضویت در راکت" />
+<meta property="og:url" content="https://roocket.ir/register" />
+<meta property="og:site_name" content="مجله آموزشی راکت" />
+<meta property="og:brand" content="راکت" />
+<meta property="og:locale" content="fa" />
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@roocketir" />
+<meta name="twitter:title" content="عضویت در راکت" />
+
+        <meta name="ROBOTS" content="NOINDEX, NOFOLLOW">
+    <link rel="stylesheet" href="/Css/signUp.css">
+    <link rel="stylesheet" href="/Css/font-awesome.min.css">
+    
+    <script type="application/ld+json">{"@context": "http://schema.org","@type": "WebSite","url": "https://roocket.ir/","name":"راکت مجله آموزش طراحی و برنامه نویسی","potentialAction": {"@type": "SearchAction","target": "http://roocket.ir/search?search={search_term_string}","query-input": "required name=search_term_string"}}</script>
+    <script type="application/ld+json">{"@context": "http://schema.org","@type": "Organization","email": "info[at]roocket.ir","name": "roocket.ir","telephone": "09381329963","sameAs" : ["https://www.instagram.com/roocketir/"]}</script>
+</head>
+<body>
+<div class="wrapper" id="app">
+    <login :showmodal="showModalLogin" @close-modal="showModalLogin = false"></login>
+<header class="header_section">
+    <div class="nav">
+
+                            
+        <div class="header_top_menu">
+            <div class="container">
+                <ul>
+                    <li><a href="/skills-chart">چارت مهارت</a></li>
+                    
+                    <li><a href="https://t.me/roocket_ir" rel="nofollow">کانال تلگرام</a></li>
+                </ul>
+                <ul>
+                    <li><a href="/about-us">درباره راکت</a></li>
+                    <li><a href="/contact-us">ارتباط با ما</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <nav class="nav_section container">
+                            <h3 class="title"><a href="/">مجله آموزشی <span>راکت</span></a></h3>
+                        
+            <search></search>
+
+            <div class="header_action">
+                                    <a class="register" href="/signUp">عضویت</a>
+                    
+                    <a class="login" href="/login" >ورود</a>
+                            </div>
+            <div class="hamburger_menu">
+                <i class="fa fa-bars" id="hamburger_menu" ref="hamburgerMenu" @click="hamburgerMenu($event)" aria-hidden="true"></i>
+            </div>
+        </nav>
+    </div>
+
+
+
+    <div class="header_menu_toggle container" id="header_menu_toggle" ref="header_menu_toggle">
+        <ul>
+            <li class="no-action">
+                <form class="search_box" action="/search">
+                    <input type="text" name="search" placeholder="دنبال چی میگردی ؟">
+                </form>
+            </li>
+            <li><a href="/">صفحه اصلی</a></li>
+                            <li><a href="/login">ورود</a></li>
+                <li><a href="/register/plan">عضویت</a></li>
+                        <li><a href="/discuss">بحث و گفتگو ها</a></li>
+            <li><a href="/series">دوره های آموزشی</a></li>
+            <li><a href="/lessons">آخرین ویدیوها</a></li>
+            <li><a href="/articles">مقالات</a></li>
+            <li><a href="/podcast">راکت‌کست</a></li>
+            <li><a href="https://t.me/roocket_ir" rel="nofollow">کانال تلگرام</a></li>
+            <li><a href="/contact-us">ارتباط با ما</a></li>
+        </ul>
+    </div>
+
+    <div class="header_menu">
+        <ul class="container">
+            <li><a href="/">صفحه اصلی</a></li>
+            <li><a href="/discuss">بحث و گفتگو ها</a></li>
+            <li class="has-submenu">
+                <a href="#">دوره های آموزشی</a>
+                <ul class="submenu">
+                    <li class="submenu-item">
+                        <span class="icon"></span>
+                        <a href="/series">همه دوره‌ها</a></li>
+                    <li class="submenu-item">
+                        <span class="icon"></span>
+                        <a href="/lessons">آخرین ویدیوها</a>
+                    </li>
+                    
+                        
+                        
+                    
+                </ul>
+            </li>
+            <li><a href="/articles">مقالات</a></li>
+            <li><a href="/podcast">راکت‌کست</a></li>
+        </ul>
+    </div>
+    
+
+</header>
+        <div class="register_panel">
+        <div class="container">
+            <div class="register_panel--head">
+                <h3 class="title">فرم عضویت</h3>
+                <p class="description">در عرض چند ثانیه در راکت عضو شوید تا بتوانید از امکانات سایت بصورت کامل استفاده کنید . همه این امکانات در کنار هم قرار گرفته اند تا به شما کمک کنند به ساده ترین روش , جدیدترین و کاربردی ترین زبان ها و فریمورک های روز جهان رو یاد بگیرید</p>
+            </div>
+            <div class="register_panel--section form-register">
+                <form action="/signUp" method="post" class="form">
+                    <input type="hidden" name="_token" value="HHDFkBB0jQSdyKxukcKfbqWAhviYqSeHZ0mT7yYG">
+                    <div class="loginWith">
+                            {{ csrfField() }}
+                        <span class="title">شما میتوانید بدون ثبت نام با اکانت گوگل یا گیت هاب وارد سایت شوید</span>
+                        <div class="button">
+                            <a href="https://roocket.ir/login/yahoo"><div class="yahoo" aria-hidden="true">Yahoo</div></a>
+                            <a href="https://roocket.ir/login/google"><i class="fa fa-google" aria-hidden="true"></i></a>
+                            
+                            <a href="https://roocket.ir/login/github"><i class="fa fa-github-square" aria-hidden="true"></i></a>
+                        </div>
+                        <span class="or">یا</span>
+                    </div>
+                    <div class="form-group">
+                        <label class="label-control" for="panel">پنل های عضویت</label>
+                        <span class="select">
+                  <select class="form-control" id="plan" name="plan">
+                    <option value="0" selected>رایگان</option>
+                    <option value="1" >ماهانه - 49 هزار تومان</option>
+                    <option value="3" >چهار ماه - 79 هزار تومان - 20% تخفیف برای خرید دوره های نقدی</option>
+                    <option value="12" >یکساله - 239 هزار تومان - 40% تخفیف برای خرید دوره های نقدی</option>
+                  </select>
+              </span>
+                    </div>
+                    <div class="form-group">
+                        <label class="label-control">اطلاعات کاربری</label>
+                        <input type="text" class="form-control " name="name" value="" placeholder="نام نمایشی خود در سایت را وارد کنید.">
+                                            </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control " name="email" value="" placeholder="ایمیل خود را وارد کنید">
+                                            </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control " name="password" placeholder="پسورد خود را وارد کنید">
+                                            </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control " name="password_confirmation" placeholder="تکرار پسورد را وارد کنید">
+                                            </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-info">عضویت</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <notifications  classes="notification-style" position="bottom right" group="notify" />
+</div>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-top">
+            <div class="about_us">
+                <h4 class="title">درباره راکت</h4>
+                <p class="body">راکت یکی از پرتلاش‌ترین و بروزترین وبسایت های آموزشی در سطح ایران است که همیشه تلاش کرده تا بتواند جدیدترین و بروزترین مقالات و دوره‌های آموزشی را در اختیار علاقه‌مندان ایرانی قرار دهد. تبدیل کردن برنامه نویسان ایرانی به بهترین برنامه نویسان جهان هدف ماست </p>
+            </div>
+            <div class="roocket_section">
+                <h4 class="title">بخش های سایت</h4>
+                <ul class="body">
+                    
+                    
+                    
+                    <li><a href="/series">دوره‌های آموزشی</a></li>
+                    <li><a href="/lessons">آخرین ویدیو‌ها</a></li>
+                    <li><a href="/discuss">بحث و گفتگو</a></li>
+                    <li><a href="/contact-us">ارتباط با ما</a></li>
+                </ul>
+            </div>
+            <div class="contact_us">
+                <h4 class="title">ارتباط با ما</h4>
+                <div class="group">
+                    <div class="body">
+                        <p class="description">شما میتوانید با استفاده از یکی از راه‌های زیر با ما ارتباط برقرار کنید</p>
+                        <ul>
+                            <li><i class="fa fa-telegram"></i>شماره تلگرام :‌ 09119198904</li>
+                        </ul>
+                    </div>
+                    <p class="allow">
+                        <img id = 'jxlzjxlzjxlzjxlznbqejxlz' style = 'cursor:pointer' onclick = 'window.open("https://logo.samandehi.ir/Verify.aspx?id=111121&p=rfthrfthrfthrfthuiwkrfth", "Popup","toolbar=no, scrollbars=no, location=no, statusbar=no, menubar=no, resizable=0, width=450, height=630, top=30")' alt = 'logo-samandehi' src = 'https://roocket.ir/img/samandehi.png' />
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="copy_right">
+                کليه حقوق محصولات و محتوای اين سایت متعلق به راکت می باشد و هر گونه کپی برداری از محتوا و محصولات سایت غیر مجاز و بدون رضایت ماست
+            </div>
+            <div class="social_link">
+                <a href="https://www.facebook.com/roocketi" rel="me"><i class="fa fa-facebook-square"></i></a>
+                <a href="#" rel="me"><i class="fa fa-google"></i></a>
+                <a href="https://www.instagram.com/roocketir/" rel="me"><i class="fa fa-instagram"></i></a>
+                <a href="https://roocket.ir/feed/articles" rel="me"><i class="fa fa-rss-square"></i></a>
+                <a href="https://twitter.com/roocketir" rel="me"><i class="fa fa-twitter-square"></i></a>
+                <a href="https://t.me/roocket_ir" rel="me"><i class="fa fa-telegram"></i></a>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- Scripts -->
+
+<script type="text/javascript" src="/js/app.js?id=a61ad58b9d3fadcffc73"></script>
+</body>
+</html>
