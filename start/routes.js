@@ -17,7 +17,7 @@ const Helpers = use('Helpers')
 const Route = use('Route')
 
 
-Route.get('/','homeController.index')
+Route.get('/','HomeController.index')
 Route.on('/login').render('login').middleware('guest')
 Route.post('/login','userController.login')
 Route.post('/signUp','userController.signUp')
