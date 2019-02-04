@@ -7,13 +7,12 @@ class UserController {
     async login({auth,request , response })
     {
     
-       
-        const email = request.body.email
-        const password = request.body.password
+       const {email, password} = request.body
      
         try
         {
             await auth.attempt(email,password)
+            
             return response.redirect('/panel')
         }
         catch(error)
@@ -45,6 +44,8 @@ class UserController {
             return response.redirect('/login')
 
     }
+
+    
 }
 
 module.exports = UserController

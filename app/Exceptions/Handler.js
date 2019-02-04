@@ -26,6 +26,11 @@ class ExceptionHandler extends BaseExceptionHandler {
       return response.redirect('/login')
     }
 
+    if (error.name === 'HttpException') {
+     
+ 
+    }
+
         return super.handle(...arguments)
   }
 

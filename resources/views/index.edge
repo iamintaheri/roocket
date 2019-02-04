@@ -46,10 +46,55 @@
                <nav class="nav_section container">
                   <h1 class="title"><a href="/">مجله آموزشی <span>راکت</span></a></h1>
                   <search></search>
+                  @if(auth.user )
                   <div class="header_action">
-                     <a class="register" href="/register/plan">عضویت</a>
-                     <a class="login" href="/login" >ورود</a>
+                   <div class="user_menu_panel">
+                      <div class="box_info">
+                         <div class="image">
+                            <img src="https://www.gravatar.com/avatar/90995d00f66fba137323ae5034c462c7?s=50&amp;d=mm&amp;r=g" alt="description">
+                         </div>
+                      </div>
+                      <span>پروفایل من</span>
+                      <i aria-hidden="true" class="fa fa-angle-down"></i>
+                      <div class="dropdown-menu">
+                         <ul class="submenu">
+                            <li class="submenu-item">
+                               <span class="fa fa-user"></span>
+                               <a href="/panel">ناحیه کاربری</a>
+                            </li>
+                            <li class="submenu-item">
+                               <span class="fa fa-user"></span>
+                               <a href="/@iamintaheri/friends">مشاهده پروفایل</a>
+                            </li>
+                            <li class="submenu-item">
+                               <div class="submenu-item__right">
+                                  <span class="fa fa-bullhorn"></span>
+                                  <a href="https://roocket.ir/profile/notification/new">اعلانات</a>
+                               </div>
+                            </li>
+                            <li class="submenu-item">
+                               <span class="fa fa-comments"></span>
+                               <a href="/discuss?type=mydiscuss">گفتگوهای من</a>
+                            </li>
+                            <li class="submenu-item">
+                               <span class="fa fa-hourglass-1"></span>
+                               <a href="/user/panel/vip">افزایش اعتبار vip</a>
+                            </li>
+                            <li class="submenu-item">
+                               <span class="fa fa-sign-out"></span>
+                               <a href="/logout">خروج</a>
+                            </li>
+                         </ul>
+                      </div>
+                   </div>
                   </div>
+ 
+                     @else
+                         <div class="header_action">
+                             <a class="register" href="/register/plan">عضویت</a>
+                             <a class="login" href="/login" >ورود</a>
+                         </div>
+                     @endif
                   <div class="hamburger_menu">
                      <i class="fa fa-bars" id="hamburger_menu" ref="hamburgerMenu" @click="hamburgerMenu($event)" aria-hidden="true"></i>
                   </div>
@@ -126,7 +171,7 @@
                      @each(video in videos)
                   <div class="box_section-item" itemscope itemtype="http://schema.org/Product" data-course-id="46" id="course_46">
                      <div class="item_img">
-                        <a href="/series/build-an-educational-website-and-shop-with-laravel">
+                        <a href="/video/{{video.id}}/{{video.title}}">
                         <img itemprop="image" src="https://roocket.ir/public/image/2017/6/13/cms-laravel-cover-1.jpg" alt="ساخت یک وبسایت آموزشی (فروشگاهی) با لاراول">
                         </a>
                         <span class="box-status">کامل شده</span>
@@ -706,6 +751,6 @@
          </div>
       </footer>
       <!-- Scripts -->
-      <script type="text/javascript" src="/js/app.js?id=a61ad58b9d3fadcffc73"></script>
+      <script type="text/javascript" src="/Js/pay.js"></script>
    </body>
 </html>

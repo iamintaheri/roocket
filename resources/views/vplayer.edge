@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="shortcut icon" href="/public/img/roocket.ico">
+    <meta name="csrf-token" content="5sLTZplXqN301Oer0EW4BvDvfgEPdoYGokzRGYzY">
+    <link rel="alternate" type="application/rss+xml" title="فید خوان مقالات - راکت" href="/feed/articles" />
+    <link rel="alternate" type="application/rss+xml" title="فید خوان ویدیوها - راکت" href="/feed/episodes" />
+    <title>معرفی گیت و گیت هاب</title>
+<meta name="description" content="گیت و گیت هاب چی هستن ؟ دقیقا در این دوره هر دوی اینها رو یاد میگیرید و میفهمید که این دو ، چه معجزه عالی در دنیای برنامه نویسین. شاید خیلی از شماهای که الان دارید این متن رو میخونید ندونید که این دوتا ابزار چی ان و کارایشون چیه اما این ابزارها میتونن در توسعه &amp;nbsp;یک...">
+<meta name="keywords" content="آموزش گیت,فیلم رایگان آموزش گیت,فیلم رایگان گیت,فیلم رایگان آشنای گیت,دوره کار با گیتهاب,آشنای با گیت هاب,گیت چیه ,گیت چیست ,گیت هاب چیست ,گیت هاب چیه ">
+<link rel="canonical" href="https://roocket.ir/series/learn-git-and-github/episode/1"/>
+<meta property="og:title" content="معرفی گیت و گیت هاب" />
+<meta property="og:description" content="گیت و گیت هاب چی هستن ؟ دقیقا در این دوره هر دوی اینها رو یاد میگیرید و میفهمید که این دو ، چه معجزه عالی در دنیای برنامه نویسین. شاید خیلی از شماهای که الان دارید این متن رو میخونید ندونید که این دوتا ابزار چی ان و کارایشون چیه اما این ابزارها میتونن در توسعه &amp;nbsp;یک..." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://roocket.ir/series/learn-git-and-github/episode/1" />
+<meta property="og:site_name" content="مجله آموزشی راکت" />
+<meta property="og:brand" content="راکت" />
+<meta property="og:locale" content="fa" />
+<meta property="og:image" content="https://roocket.ir/public/image/2017/1/5/git-github-thum.png" />
+<meta property="article:published_time" content="2017-01-05T05:14:26+03:30" />
+<meta property="article:author" content="حسام موسوی" />
+<meta property="og:tag" content="آموزش گیت" />
+<meta property="og:tag" content="فیلم رایگان آموزش گیت" />
+<meta property="og:tag" content="فیلم رایگان گیت" />
+<meta property="og:tag" content="فیلم رایگان آشنای گیت" />
+<meta property="og:tag" content="دوره کار با گیتهاب" />
+<meta property="og:tag" content="آشنای با گیت هاب" />
+<meta property="og:tag" content="گیت چیه " />
+<meta property="og:tag" content="گیت چیست " />
+<meta property="og:tag" content="گیت هاب چیست " />
+<meta property="og:tag" content="گیت هاب چیه " />
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@roocketir" />
+<meta name="twitter:title" content="معرفی گیت و گیت هاب" />
+<meta name="twitter:description" content="گیت و گیت هاب چی هستن ؟ دقیقا در این دوره هر دوی اینها رو یاد میگیرید و میفهمید که این دو ، چه معجزه عالی در دنیای برنامه نویسین. شاید خیلی از شماهای که الان دارید این متن رو میخونید ندونید که این دوتا ابزار چی ان و کارایشون چیه اما این ابزارها میتونن در توسعه &amp;nbsp;یک..." />
+
+        <link rel="stylesheet" href="/Css/player.css">
+    <link rel="stylesheet" href="/Css/font-awesome.min.css">
+        <link rel="stylesheet" href="/Css/plyr.css">
+    <link rel="stylesheet" href="/Css/rainbow.css">
+    <script src="/js/highlight.pack.js"></script>
+    <script>window.hljs = hljs;hljs.initHighlightingOnLoad()</script>
+
+    <script type="application/ld+json">{"@context": "http://schema.org","@type": "WebSite","url": "https://roocket.ir/","name":"راکت مجله آموزش طراحی و برنامه نویسی","potentialAction": {"@type": "SearchAction","target": "http://roocket.ir/search?search={search_term_string}","query-input": "required name=search_term_string"}}</script>
+    <script type="application/ld+json">{"@context": "http://schema.org","@type": "Organization","email": "info[at]roocket.ir","name": "roocket.ir","telephone": "09381329963","sameAs" : ["https://www.instagram.com/roocketir/"]}</script>
+</head>
+<body>
+<div class="wrapper" id="app">
+    <header class="header_section">
+    <div class="nav">
+
+                                                        <header-message-box msg="اکانت خود را به اعضای ویژه ارتقاء دهید" linkto="/user/panel/vip"></header-message-box>
+                                    
+        <div class="header_top_menu">
+            <div class="container">
+                <ul>
+                    <li><a href="/skills-chart">چارت مهارت</a></li>
+                    
+                    <li><a href="https://t.me/roocket_ir" rel="nofollow">کانال تلگرام</a></li>
+                </ul>
+                <ul>
+                    <li><a href="/about-us">درباره راکت</a></li>
+                    <li><a href="/contact-us">ارتباط با ما</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <nav class="nav_section container">
+                            <h3 class="title"><a href="/">مجله آموزشی <span>راکت</span></a></h3>
+                        
+            <search></search>
+
+            <div class="header_action">
+                                    
+                    
+
+                    <div class="user_menu_panel">
+                        <div class="box_info">
+                                                        <div class="image">
+                                <img src="https://www.gravatar.com/avatar/90995d00f66fba137323ae5034c462c7?s=50&amp;d=mm&amp;r=g" alt="description">
+                            </div>
+                        </div>
+                        <span>پروفایل من</span>
+                        <i aria-hidden="true" class="fa fa-angle-down"></i>
+                        <div class="dropdown-menu">
+                            <ul class="submenu">
+                                <li class="submenu-item">
+                                    <span class="fa fa-user"></span>
+                                    <a href="/user/panel">ناحیه کاربری</a>
+                                </li>
+                                <li class="submenu-item">
+                                    <span class="fa fa-user"></span>
+                                    <a href="/@iamintaheri/friends">مشاهده پروفایل</a>
+                                </li>
+                                <li class="submenu-item">
+                                    <div class="submenu-item__right">
+                                        <span class="fa fa-bullhorn"></span>
+                                        <a href="https://roocket.ir/profile/notification/new">اعلانات</a>
+                                    </div>
+                                                                    </li>
+                                <li class="submenu-item">
+                                    <span class="fa fa-comments"></span>
+                                    <a href="/discuss?type=mydiscuss">گفتگوهای من</a>
+                                </li>
+                                <li class="submenu-item">
+                                    <span class="fa fa-hourglass-1"></span>
+                                    <a href="/user/panel/vip">افزایش اعتبار vip</a>
+                                </li>
+                                <li class="submenu-item">
+                                    <span class="fa fa-sign-out"></span>
+                                    <a href="/logout">خروج</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                            </div>
+            <div class="hamburger_menu">
+                <i class="fa fa-bars" id="hamburger_menu" ref="hamburgerMenu" @click="hamburgerMenu($event)" aria-hidden="true"></i>
+            </div>
+        </nav>
+    </div>
+
+
+
+    <div class="header_menu_toggle container" id="header_menu_toggle" ref="header_menu_toggle">
+        <ul>
+            <li class="no-action">
+                <form class="search_box" action="/search">
+                    <input type="text" name="search" placeholder="دنبال چی میگردی ؟">
+                </form>
+            </li>
+            <li><a href="/">صفحه اصلی</a></li>
+                            <li><a href="https://roocket.ir/user/panel">پنل کاربری</a></li>
+                <li><a href="/@iamintaheri/friends">مشاهده پروفایل</a></li>
+                <li><a href="/logout">خروج</a></li>
+                        <li><a href="/discuss">بحث و گفتگو ها</a></li>
+            <li><a href="/series">دوره های آموزشی</a></li>
+            <li><a href="/lessons">آخرین ویدیوها</a></li>
+            <li><a href="/articles">مقالات</a></li>
+            <li><a href="/podcast">راکت‌کست</a></li>
+            <li><a href="https://t.me/roocket_ir" rel="nofollow">کانال تلگرام</a></li>
+            <li><a href="/contact-us">ارتباط با ما</a></li>
+        </ul>
+    </div>
+
+    <div class="header_menu">
+        <ul class="container">
+            <li><a href="/">صفحه اصلی</a></li>
+            <li><a href="/discuss">بحث و گفتگو ها</a></li>
+            <li class="has-submenu">
+                <a href="#">دوره های آموزشی</a>
+                <ul class="submenu">
+                    <li class="submenu-item">
+                        <span class="icon"></span>
+                        <a href="/series">همه دوره‌ها</a></li>
+                    <li class="submenu-item">
+                        <span class="icon"></span>
+                        <a href="/lessons">آخرین ویدیوها</a>
+                    </li>
+                    
+                        
+                        
+                    
+                </ul>
+            </li>
+            <li><a href="/articles">مقالات</a></li>
+            <li><a href="/podcast">راکت‌کست</a></li>
+        </ul>
+    </div>
+    
+
+</header>
+                <send-comment :showmodal="showModalSendComment" @close-modal="showModalSendComment = false" :parent="commentParentId" :commentable_id="553" :commentable_type="'App\\Episode'" auth=1></send-comment>
+        <cart :showmodal="showModalCartSeries" @close-modal="showModalCartSeries = false" :series="{&quot;id&quot;:37,&quot;title&quot;:&quot;\u0622\u0645\u0648\u0632\u0634 \u06af\u06cc\u062a \u0648 \u06af\u06cc\u062a \u0647\u0627\u0628&quot;,&quot;price&quot;:0,&quot;presell&quot;:0}" :credit="0" :user-type="'month'" :user-vip="0" token="5sLTZplXqN301Oer0EW4BvDvfgEPdoYGokzRGYzY"></cart>
+        <div class="co-breadcrumb white_two_dark_bg">
+        <div class="container">
+            <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+        <li class="title">شما اینجا هستید: </li>
+        
+                            <li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                    <a itemprop="item" href="/">
+                        <span itemprop="name">مجله آموزشی راکت</span>
+                        <i class="fa fa-chevron-left"></i>
+                    </a>
+                    <meta itemprop="position" content="1">
+                </li>
+            
+        
+                            <li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                    <a itemprop="item" href="/lessons">
+                        <span itemprop="name">آموزش برنامه نویسی</span>
+                        <i class="fa fa-chevron-left"></i>
+                    </a>
+                    <meta itemprop="position" content="2">
+                </li>
+            
+        
+                            <li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                    <a itemprop="item" href="/series/learn-git-and-github">
+                        <span itemprop="name">آموزش گیت و گیت هاب</span>
+                        <i class="fa fa-chevron-left"></i>
+                    </a>
+                    <meta itemprop="position" content="3">
+                </li>
+            
+        
+                            <li class="breadcrumb-item active" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                    <span itemprop="name">معرفی گیت و گیت هاب</span>
+                    <meta itemprop="position" content="4">
+                </li>
+            
+            </ol>
+
+
+
+    
+        
+        
+
+            
+                
+                    
+                        
+                        
+                    
+                
+            
+                
+                    
+                
+            
+
+        
+    
+
+        </div>
+    </div>
+    <div class="co-padding gray_bg">
+        <div class="subject container">
+            <div class="subject_head">
+                <div class="subject_head--title">
+                    <h1 class="title">معرفی گیت و گیت هاب</h1>
+                </div>
+            </div>
+            <div class="subject_details">
+                <div class="subject_details--item">
+                    <i class="fa fa-user" aria-hidden="true"></i>
+                    <span class="item_head">مدرس : </span>
+                    <span class="item_section">حسام موسوی</span>
+                </div>
+                <div class="subject_details--item">
+                    <i class="fa fa-clock-o" aria-hidden="true"></i>
+                    <span class="item_head">زمان قرارگیری  :  </span>
+                    <span class="item_section">16 دی 1395</span>
+                </div>
+                <div class="subject_details--item">
+                    <i class="fa fa-clock-o" aria-hidden="true"></i>
+                    <span class="item_head">زمان این قسمت :  </span>
+                    <span class="item_section"> 13:17</span>
+                </div>
+            </div>
+            <hr>
+            <div class="subject_main">
+                <div class="subject_content">
+                    <div class="episode_download top">
+    <a href="https://roocket.ir/download/episode/553?mac=$2y$10$r45KYhUivW9ZWsGNAs4zkOw7QPWVF5vwbETN8gWh99oYN8CbJ3ilW&amp;timestamp=1549228734"><i class="fa fa-download" aria-hidden="true"></i> دانلود این قسمت</a>
+</div>            <div class="course_buy top">
+    <div class="content">
+        <div class="course_buy--description">
+                            <span>تا زمانی که این دوره رایگان است شما بصورت کامل به این دوره دسترسی دارید</span>
+                    </div>
+        <hr class="line">
+        <div class="course_info">
+                        <div class="course_info--item">
+                <span>قیمت دوره</span>
+                                    <span>رایگان</span>
+                            </div>
+            <div class="course_info--item">
+                <span>وضعیت دوره</span>
+                <span>
+                                                             تکمیل شده
+                                                    </span>
+            </div>
+        </div>
+        <hr class="line">
+        <div class="course_buy--button">
+                                                <a href="#">این دوره رایگان است</a>
+                                    </div>
+    </div>
+</div>                    <div class="subject_description">
+                        <span class="title">توضیحات</span>
+                        <div class="content">
+                           <p dir="rtl">گیت و گیت هاب چی هستن ؟ دقیقا در این دوره هر دوی اینها رو یاد میگیرید و میفهمید که این دو ، چه معجزه عالی در دنیای برنامه نویسین. شاید خیلی از شماهای که الان دارید این متن رو میخونید ندونید که این دوتا ابزار چی ان و کارایشون چیه اما این ابزارها میتونن در توسعه &nbsp;یک اپ&nbsp;فوق العاده مفید و کاربردی باشن . از نظر من کسی که با این دوتا ابزار آشنا نباشه اصلا اسمش رو هم نباید بزاره توسعه دهنده . اگر کنجکاو شدید که واقعا این ها&nbsp;چی هستن،&nbsp;حتما قسمت اول رو ببینید تا کاملا با گیت و گیت هاب آشنا بشین . &nbsp;</p>
+
+                        </div>
+                    </div>
+                                                                            <div class="video_section">
+    
+           
+        
+        
+        
+            
+            
+        
+    
+
+    <video poster="https://roocket.ir/public/image/2017/6/13/git-github-t.jpg" id="video-player" preload="none" playsinline controls>
+        <source src="/download" type="video/mp4">
+    </video>
+</div>                                                                <div class="episodes_list" id="#episodes_list">
+                        <div class="episodes_list--head">
+                            <a href="/series/learn-git-and-github" class="title">آموزش گیت و گیت هاب</a>
+                            <span class="all-time">زمان کل دوره : 03:13:14</span>
+                        </div>
+                        <div class="episodes_list--section">
+                                                            <subscription-course series="37" subscription=""></subscription-course>
+                            
+                                                            <div class="episodes_list--item active">
+    <div class="section-right">
+                            <span class="episodes_list--number">1</span>
+                    <div class="episodes_list--title">
+            <a href="/series/learn-git-and-github/episode/1">معرفی گیت و گیت هاب</a>
+        </div>
+    </div>
+
+    <div class="section-left">
+        <div class="episodes_list--details">
+                            <span class="detail-type">رایگان</span>
+                        <span class="detail-time">13:17</span>
+        </div>
+    </div>
+</div>                                                            <div class="episodes_list--item ">
+    <div class="section-right">
+                            <span class="episodes_list--number">2</span>
+                    <div class="episodes_list--title">
+            <a href="/series/learn-git-and-github/episode/2">کار با گیت بخش اول</a>
+        </div>
+    </div>
+
+    <div class="section-left">
+        <div class="episodes_list--details">
+                            <span class="detail-type">رایگان</span>
+                        <span class="detail-time">10:36</span>
+        </div>
+    </div>
+</div>                                                            <div class="episodes_list--item ">
+    <div class="section-right">
+                            <span class="episodes_list--number">3</span>
+                    <div class="episodes_list--title">
+            <a href="/series/learn-git-and-github/episode/3">کار با گیت بخش دوم</a>
+        </div>
+    </div>
+
+    <div class="section-left">
+        <div class="episodes_list--details">
+                            <span class="detail-type">رایگان</span>
+                        <span class="detail-time">23:50</span>
+        </div>
+    </div>
+</div>                                                            <div class="episodes_list--item ">
+    <div class="section-right">
+                            <span class="episodes_list--number">4</span>
+                    <div class="episodes_list--title">
+            <a href="/series/learn-git-and-github/episode/4">ریست کردن Commit ها</a>
+        </div>
+    </div>
+
+    <div class="section-left">
+        <div class="episodes_list--details">
+                            <span class="detail-type">رایگان</span>
+                        <span class="detail-time">20:20</span>
+        </div>
+    </div>
+</div>                                                            <div class="episodes_list--item ">
+    <div class="section-right">
+                            <span class="episodes_list--number">5</span>
+                    <div class="episodes_list--title">
+            <a href="/series/learn-git-and-github/episode/5">یادگیری Branch و merge</a>
+        </div>
+    </div>
+
+    <div class="section-left">
+        <div class="episodes_list--details">
+                            <span class="detail-type">رایگان</span>
+                        <span class="detail-time">29:32</span>
+        </div>
+    </div>
+</div>                                                            <div class="episodes_list--item ">
+    <div class="section-right">
+                            <span class="episodes_list--number">6</span>
+                    <div class="episodes_list--title">
+            <a href="/series/learn-git-and-github/episode/6">کار با stash</a>
+        </div>
+    </div>
+
+    <div class="section-left">
+        <div class="episodes_list--details">
+                            <span class="detail-type">رایگان</span>
+                        <span class="detail-time">18:45</span>
+        </div>
+    </div>
+</div>                                                            <div class="episodes_list--item ">
+    <div class="section-right">
+                            <span class="episodes_list--number">7</span>
+                    <div class="episodes_list--title">
+            <a href="/series/learn-git-and-github/episode/7">کار با gitignore</a>
+        </div>
+    </div>
+
+    <div class="section-left">
+        <div class="episodes_list--details">
+                            <span class="detail-type">رایگان</span>
+                        <span class="detail-time">20:45</span>
+        </div>
+    </div>
+</div>                                                            <div class="episodes_list--item ">
+    <div class="section-right">
+                            <span class="episodes_list--number">8</span>
+                    <div class="episodes_list--title">
+            <a href="/series/learn-git-and-github/episode/8">پروژه در github</a>
+        </div>
+    </div>
+
+    <div class="section-left">
+        <div class="episodes_list--details">
+                            <span class="detail-type">رایگان</span>
+                        <span class="detail-time">15:37</span>
+        </div>
+    </div>
+</div>                                                            <div class="episodes_list--item ">
+    <div class="section-right">
+                            <span class="episodes_list--number">9</span>
+                    <div class="episodes_list--title">
+            <a href="/series/learn-git-and-github/episode/9">pull و clone پروژه از github</a>
+        </div>
+    </div>
+
+    <div class="section-left">
+        <div class="episodes_list--details">
+                            <span class="detail-type">رایگان</span>
+                        <span class="detail-time">14:35</span>
+        </div>
+    </div>
+</div>                                                            <div class="episodes_list--item ">
+    <div class="section-right">
+                            <span class="episodes_list--number">10</span>
+                    <div class="episodes_list--title">
+            <a href="/series/learn-git-and-github/episode/10">همکاری در پروژه های github</a>
+        </div>
+    </div>
+
+    <div class="section-left">
+        <div class="episodes_list--details">
+                            <span class="detail-type">رایگان</span>
+                        <span class="detail-time">25:57</span>
+        </div>
+    </div>
+</div>                                                    </div>
+
+                    </div>
+
+                </div>
+                <div class="subject_sidebar">
+                    <div class="episode_download ">
+    <a href="https://roocket.ir/download/episode/553?mac=$2y$10$Bji0BCGRro91vrlT0bWm0uZWzE1.ikM18hruAqW5iJmFfoQtxRXES&amp;timestamp=1549228734"><i class="fa fa-download" aria-hidden="true"></i> دانلود این قسمت</a>
+</div>            <div class="course_buy ">
+    <div class="content">
+        <div class="course_buy--description">
+                            <span>تا زمانی که این دوره رایگان است شما بصورت کامل به این دوره دسترسی دارید</span>
+                    </div>
+        <hr class="line">
+        <div class="course_info">
+                        <div class="course_info--item">
+                <span>قیمت دوره</span>
+                                    <span>رایگان</span>
+                            </div>
+            <div class="course_info--item">
+                <span>وضعیت دوره</span>
+                <span>
+                                                             تکمیل شده
+                                                    </span>
+            </div>
+        </div>
+        <hr class="line">
+        <div class="course_buy--button">
+                                                <a href="#">این دوره رایگان است</a>
+                                    </div>
+    </div>
+</div>                    <div class="category sidebar_box">
+                       <div class="subject_sidebar--head">
+                           <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                           <span>دسته بندی ها</span>
+                           <i class="fa fa-caret-down toggleCate" id="toggleCate" aria-hidden="true" @click="toggleCate($event)"></i>
+                       </div>
+                       <div class="subject_sidebar--section">
+    <ul>
+                    <li>
+                <i class="fa fa-square" aria-hidden="true"></i>
+                <a href="/series?order=latest&type=all&category=لاراول ">لاراول </a>
+            </li>
+                    <li>
+                <i class="fa fa-square" aria-hidden="true"></i>
+                <a href="/series?order=latest&type=all&category=کاربردی">کاربردی</a>
+            </li>
+                    <li>
+                <i class="fa fa-square" aria-hidden="true"></i>
+                <a href="/series?order=latest&type=all&category=php">php</a>
+            </li>
+                    <li>
+                <i class="fa fa-square" aria-hidden="true"></i>
+                <a href="/series?order=latest&type=all&category=وردپرس">وردپرس</a>
+            </li>
+                    <li>
+                <i class="fa fa-square" aria-hidden="true"></i>
+                <a href="/series?order=latest&type=all&category=جاوا">جاوا</a>
+            </li>
+                    <li>
+                <i class="fa fa-square" aria-hidden="true"></i>
+                <a href="/series?order=latest&type=all&category=جاوااسکریپت">جاوااسکریپت</a>
+            </li>
+                    <li>
+                <i class="fa fa-square" aria-hidden="true"></i>
+                <a href="/series?order=latest&type=all&category=اندروید">اندروید</a>
+            </li>
+                    <li>
+                <i class="fa fa-square" aria-hidden="true"></i>
+                <a href="/series?order=latest&type=all&category=پایتون">پایتون</a>
+            </li>
+            </ul>
+</div>                   </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="co-padding">
+        <div class="box container">
+            <div class="box_head">
+                <h3 class="title">دورهای پیشنهادی</h3>
+                <a href="/series" class="btn_more">
+                    مشاهده همه دوره ها
+                </a>
+            </div>
+            <div class="box_section">
+                                    <div class="box_section-item" itemscope itemtype="http://schema.org/Product" data-course-id="66" id="course_66">
+    <div class="item_img">
+        <a href="/series/learn-to-create-progressive-web-apps">
+            <img itemprop="image" src="https://roocket.ir/public/image/2018/6/7/pwa-1.png" alt="آموزش ایجاد وبسایت PWA یا Progressive Web Apps">
+        </a>
+                                                        <span class="box-status">کامل شده</span>
+                                        </div>
+    <div class="item_content">
+        <h2 class="title"><a itemprop="url" href="/series/learn-to-create-progressive-web-apps"><span itemprop="name">آموزش ایجاد وبسایت PWA یا Progressive Web Apps</span></a></h2>
+        <p class="description" itemprop="description">
+            وب‌اپلیکیشن‌های پیش رونده (Progressive Web Apps) یا به اختصار PWA می‌توانند تحول بزرگ بعدی در حوزه‌ی اپلیکیشن‌های موبایل محسوب شوند. این فناوری که ابت...
+        </p>
+    </div>
+    <div class="item_footer">
+        <span class="course_time">11:12:57 <i class="fa fa-clock-o" aria-hidden="true"></i></span>
+                    <span class="course_price">80000 تومان</span>
+            </div>
+</div>                                    <div class="box_section-item" itemscope itemtype="http://schema.org/Product" data-course-id="62" id="course_62">
+    <div class="item_img">
+        <a href="/series/coding-with-vscode">
+            <img itemprop="image" src="https://roocket.ir/public/image/2018/3/28/vscode-1.png" alt="آموزش کار با Visual Studio Code">
+        </a>
+                                                        <span class="box-status">کامل شده</span>
+                                        </div>
+    <div class="item_content">
+        <h2 class="title"><a itemprop="url" href="/series/coding-with-vscode"><span itemprop="name">آموزش کار با Visual Studio Code</span></a></h2>
+        <p class="description" itemprop="description">
+            نرم افزار Visual Studio Code یا با اختصار vscode یکی از ویرایشگرهای کد محبوب در بین برنامه نویسان است که بسیار کاربری و حرفه ایست و از همه مهمتر کاملا...
+        </p>
+    </div>
+    <div class="item_footer">
+        <span class="course_time">03:09:54 <i class="fa fa-clock-o" aria-hidden="true"></i></span>
+                    <span class="course_price">رایگان</span>
+            </div>
+</div>                                    <div class="box_section-item" itemscope itemtype="http://schema.org/Product" data-course-id="59" id="course_59">
+    <div class="item_img">
+        <a href="/series/management-and-development-of-open-source-projects">
+            <img itemprop="image" src="https://roocket.ir/public/image/2018/2/20/github-1.png" alt="مدیریت پروژه های متن‌باز با git و github">
+        </a>
+                                                        <span class="box-status">درحال برگزاری</span>
+                                        </div>
+    <div class="item_content">
+        <h2 class="title"><a itemprop="url" href="/series/management-and-development-of-open-source-projects"><span itemprop="name">مدیریت پروژه های متن‌باز با git و github</span></a></h2>
+        <p class="description" itemprop="description">
+            اگر از دنبال کنندگان مجله آموزشی راکت باشید میدانید که در راکت دوره های زیادی از ابزارهای اوپن سورس مثل لاراول ، فریمورک های جاوا اسکریپت ، نود جی اس...
+        </p>
+    </div>
+    <div class="item_footer">
+        <span class="course_time">02:08:00 <i class="fa fa-clock-o" aria-hidden="true"></i></span>
+                    <span class="course_price">اعضای ویژه</span>
+            </div>
+</div>                                    <div class="box_section-item" itemscope itemtype="http://schema.org/Product" data-course-id="10" id="course_10">
+    <div class="item_img">
+        <a href="/series/work-with-phpstrom">
+            <img itemprop="image" src="https://roocket.ir/public/image/2017/6/13/14452512499phpStorm.jpg" alt="دوره کار با phpstorm">
+        </a>
+                                                        <span class="box-status">کامل شده</span>
+                                        </div>
+    <div class="item_content">
+        <h2 class="title"><a itemprop="url" href="/series/work-with-phpstrom"><span itemprop="name">دوره کار با phpstorm</span></a></h2>
+        <p class="description" itemprop="description">
+            JetBrains PhpStorm یک محیط توسعه‌ی زبان برنامه‌نویسی PHP بوده که بر پایه‌ی پلت‌فرم JetBrains IntelliJ IDEA طراحی شده است و تقریبا همه‌ی امکانات JetBra...
+        </p>
+    </div>
+    <div class="item_footer">
+        <span class="course_time">00:37:53 <i class="fa fa-clock-o" aria-hidden="true"></i></span>
+                    <span class="course_price">رایگان</span>
+            </div>
+</div>                            </div>
+            <div class="box_footer">
+                <a href="/lessons" class="more last-episode">
+                    مشاهده آخرین ویدیوهای آپلود شده
+                </a>
+                <span class="note">در این بخش آخرین قسمت های قرار گرفته در دوره های آموزشی قابل مشاهده خواهد بود</span>
+            </div>
+        </div>
+    </div>
+
+
+    <notifications  classes="notification-style" position="bottom right" group="notify" />
+</div>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-top">
+            <div class="about_us">
+                <h4 class="title">درباره راکت</h4>
+                <p class="body">راکت یکی از پرتلاش‌ترین و بروزترین وبسایت های آموزشی در سطح ایران است که همیشه تلاش کرده تا بتواند جدیدترین و بروزترین مقالات و دوره‌های آموزشی را در اختیار علاقه‌مندان ایرانی قرار دهد. تبدیل کردن برنامه نویسان ایرانی به بهترین برنامه نویسان جهان هدف ماست </p>
+            </div>
+            <div class="roocket_section">
+                <h4 class="title">بخش های سایت</h4>
+                <ul class="body">
+                    
+                    
+                    
+                    <li><a href="/series">دوره‌های آموزشی</a></li>
+                    <li><a href="/lessons">آخرین ویدیو‌ها</a></li>
+                    <li><a href="/discuss">بحث و گفتگو</a></li>
+                    <li><a href="/contact-us">ارتباط با ما</a></li>
+                </ul>
+            </div>
+            <div class="contact_us">
+                <h4 class="title">ارتباط با ما</h4>
+                <div class="group">
+                    <div class="body">
+                        <p class="description">شما میتوانید با استفاده از یکی از راه‌های زیر با ما ارتباط برقرار کنید</p>
+                        <ul>
+                            <li><i class="fa fa-telegram"></i>شماره تلگرام :‌ 09119198904</li>
+                        </ul>
+                    </div>
+                    <p class="allow">
+                        <img id = 'jxlzjxlzjxlzjxlznbqejxlz' style = 'cursor:pointer' onclick = 'window.open("https://logo.samandehi.ir/Verify.aspx?id=111121&p=rfthrfthrfthrfthuiwkrfth", "Popup","toolbar=no, scrollbars=no, location=no, statusbar=no, menubar=no, resizable=0, width=450, height=630, top=30")' alt = 'logo-samandehi' src = 'https://roocket.ir/img/samandehi.png' />
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="copy_right">
+                کليه حقوق محصولات و محتوای اين سایت متعلق به راکت می باشد و هر گونه کپی برداری از محتوا و محصولات سایت غیر مجاز و بدون رضایت ماست
+            </div>
+            <div class="social_link">
+                <a href="https://www.facebook.com/roocketi" rel="me"><i class="fa fa-facebook-square"></i></a>
+                <a href="#" rel="me"><i class="fa fa-google"></i></a>
+                <a href="https://www.instagram.com/roocketir/" rel="me"><i class="fa fa-instagram"></i></a>
+                <a href="https://roocket.ir/feed/articles" rel="me"><i class="fa fa-rss-square"></i></a>
+                <a href="https://twitter.com/roocketir" rel="me"><i class="fa fa-twitter-square"></i></a>
+                <a href="https://t.me/roocket_ir" rel="me"><i class="fa fa-telegram"></i></a>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- Scripts -->
+
+{{--  <script type="text/javascript" src="/js/app.js?id=a61ad58b9d3fadcffc73"></script>  --}}
+    <script type="text/javascript" src="/Js/player.js"></script>
+    <script>var player = new Plyr('#video-player',{speed : { selected : 1}});</script>
+</body>
+</html>

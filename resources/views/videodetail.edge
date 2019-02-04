@@ -209,8 +209,8 @@
                            <hr class="line">
                            <div class="course_info">
                               <div class="course_info--item">
-                                 <span>تعداد شرکت کنندگان</span>
-                                 <span>745 نفر</span>
+                                 <span> شرکت کنندگان</span>
+                                 <span>{{video.buyers}} نفر</span>
                               </div>
                               <div class="course_info--item">
                                  <span>قیمت دوره</span>
@@ -271,11 +271,11 @@
                            <div class="course_info">
                               <div class="course_info--item">
                                  <span>تعداد شرکت کنندگان</span>
-                                 <span>745 نفر</span>
+                                 <span> {{ video.__meta__.users_count }} نفر</span>
                               </div>
                               <div class="course_info--item">
                                  <span>قیمت دوره</span>
-                                 <span>125000 تومان</span>
+                                 <span>{{video.price}} تومان</span>
                               </div>
                               <div class="course_info--item">
                                  <span>وضعیت دوره</span>
@@ -287,7 +287,7 @@
                            <hr class="line">
                            @if(auth.user)
                           
-                            <div class="course_buy--button"><a href="#">خریداری این دوره</a></div>
+                        <div class="course_buy--button"><a href="/order/{{video.id}}">خریداری این دوره</a></div>
                            @else
                             <div class="course_buy--button">
                                     <a href="/login" >ابتدا وارد سایت شوید</a>
